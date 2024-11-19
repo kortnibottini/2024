@@ -1,0 +1,11 @@
+.marquee {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  color: black;
+}
+
+.marquee span {
+  white-space: nowrap;
+}

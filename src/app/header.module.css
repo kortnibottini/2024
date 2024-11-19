@@ -1,0 +1,61 @@
+.header {
+    position: absolute;
+    background: transparent;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    padding: 36px 42px;
+    color: black;
+    width: 100%;
+}
+
+.headerInner {
+    display: flex;
+    align-items: center;
+    gap: 74px;
+}
+
+.textInfo {
+    gap: 74px;
+    display: flex;
+    font-size: 16px;
+}
+
+.headerButton {
+    border-radius: 40px;
+    font-size: 12px;
+    font-weight: 200;
+    padding: 15px 40px;
+    transition: filter 0.5s;
+}
+
+.navigation {
+    margin-left: auto;
+}
+
+.contact {
+    background: white;
+    color: black;
+}
+
+.contact:hover,
+.resume:hover {
+    filter: invert(100%);
+}
+
+.resume {
+    background: black;
+    color: white;
+    margin-right: 15px;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .textInfo {
+        display: none;
+    }
+
+    .resume {
+        display: none;
+    }
+}

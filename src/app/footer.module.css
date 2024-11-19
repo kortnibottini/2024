@@ -1,0 +1,23 @@
+.footer {
+  position: fixed;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  width: 100%;
+  bottom: 0;
+  font-size: 12px;
+  font-weight: 300;
+  padding:0 30px 18px 30px;
+}
+
+.footer a:hover {
+  font-weight: 600;
+}
+
+.footerMiddle {
+  text-align: center;
+}
+
+.footerRight {
+  text-align: right;
+  vertical-align: middle;
+}

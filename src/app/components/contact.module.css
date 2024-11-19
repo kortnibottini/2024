@@ -1,0 +1,114 @@
+.contact {
+  height: 100vh;
+  justify-content: center;
+  position: sticky;
+}
+
+.contactMarquee {
+  width: 100%;
+  color: white;
+  background-color: black;
+  z-index: 99;
+  margin-top: 80px;
+}
+.contactMarquee span {
+  margin-right: 20px;
+}
+
+.nm {
+  font-size: 64px;
+}
+
+.marqueeEndEmoji,
+.marqueeStartEmoji {
+  display: inline-block;
+}
+
+span.marqueeStartEmoji {
+  margin-left: 34px;
+  margin-right: 41px;
+}
+
+span.marqueeEndEmoji {
+  margin-right: 44px;
+  margin-left: 41px;
+}
+
+.tan {
+  font-size: 48px;
+  font-family: var(--font-tan);
+}
+
+.contactInner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 500px;
+  display: flex;
+  width: 100%;
+  margin-top: 100px;
+}
+
+.contactInner form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: var(--font-oaks);
+}
+
+.contactInner input,
+.contactInner button,
+.contactInner textarea,
+.contactInner *::placeholder {
+  color: white;
+}
+
+.contactInner input,
+.contactInner textarea {
+  width: 100%;
+  background: transparent;
+  outline: 0;
+  border: 1px solid white;
+  padding: 27px;
+  margin-bottom: 30px;
+  font-family: var(--font-oaks);
+}
+
+.contactInner textarea {
+  min-height: 200px;
+}
+
+.contactInner button {
+  border-radius: 20px;
+  background-color: #2e2b26;
+  padding: 12px 56px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.contactInner button:hover {
+  background: black;
+}
+
+.contactInner button:active {
+  background: white;
+  color: black;
+}
+
+@media screen and (max-width: 1024px) {
+  .contact {
+    margin-top: 10vh;
+  }
+
+  .contactInner {
+    width: 85vw;
+    margin: 0 auto;
+    top: 30vh;
+    position: relative;
+    left: 0;
+    transform: translate(0, 0);
+  }
+}

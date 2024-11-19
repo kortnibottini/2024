@@ -1,0 +1,52 @@
+.container {
+  background-color: rgb(240 238 237);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+  transform: translateZ(0);
+  overflow: hidden;
+}
+
+.cta {
+  background-color: #2e2b26;
+  padding: 10px 20px;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  font-family: var(--font-family);
+  font-weight: 300;
+  font-size: 12px;
+  display: flex;
+  color: white;
+}
+
+.cta svg {
+  margin-left: 13px;
+}
+
+.topLeftMarquee {
+  rotate: -37deg;
+  left: -250px;
+  top: 0;
+  font-size: 21px;
+}
+
+.bottomRightMarquee {
+  --text-angle: -26deg;
+  bottom: -65vh;
+  left: 0;
+  transform-origin: bottom left;
+  transform: rotate(calc(var(--text-angle) * -1deg));
+}
+
+.bottomRightMarquee img {
+  height: 55vw;
+  width: auto;
+}
+
+.marqueeDesign {
+  font-size: 50vw;
+}

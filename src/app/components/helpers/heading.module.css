@@ -1,0 +1,16 @@
+.heading {
+  font-size: 25px;
+  font-weight: 400;
+}
+
+@media screen and (min-width: 1024px) {
+  .heading {
+    font-size: 3vw;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .heading {
+    font-size: 50px;
+  }
+}

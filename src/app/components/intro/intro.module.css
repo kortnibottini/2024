@@ -1,0 +1,109 @@
+.title {
+  margin-bottom: 48px;
+}
+
+.intro {
+  height: 200vh;
+  background: black;
+}
+
+.introInner {
+  display: grid;
+  grid-template-rows: 1;
+  grid-template-columns: 1fr auto 1fr;
+  grid-gap: 38px;
+  position: relative;
+  top: 50vh;
+  transform: translateY(-50%);
+  max-width: 85vw;
+  margin: 0 auto;
+}
+
+.heading {
+  justify-self: flex-end;
+  margin-top: -10vh;
+}
+
+.story {
+  align-self: flex-end;
+  font-family: var(--font-oaks);
+  max-width: 263px;
+}
+
+.animate-line {
+  display: block;
+  clip-path: inset(0);
+}
+
+.circleContainer {
+  position: absolute;
+  top: -110px;
+  right: -110px;
+  z-index: -1;
+}
+
+.arrowPoint {
+  position: absolute;
+  top: -44px;
+  right: -57px;
+}
+
+.circleInner {
+  position: relative;
+}
+
+.image {
+  position: relative;
+}
+
+@media screen and (max-width: 1024px) {
+  .intro {
+    flex-direction: column;
+    justify-content: unset;
+  }
+
+  .title {
+    margin-bottom: 10px;
+  }
+
+  .heading {
+    margin: 0;
+    align-self: center;
+  }
+
+  .image {
+    align-self: center;
+    margin: 0;
+  }
+
+  .image > img {
+    width: 100%;
+    height: auto;
+  }
+
+  .circleContainer {
+    display: none;
+  }
+
+  .story {
+    background: black;
+    align-self: center;
+    width: 100%;
+    max-width: fit-content;
+    margin-top: 0;
+  }
+
+  .mobileContainer {
+    position: relative;
+    top: 50vh;
+    transform: translateY(-50%);
+    display: flex;
+    margin: 0 auto;
+    gap: 38px;
+    justify-content: center;
+    background: black;
+    flex-direction: column;
+    max-width: 85vw;
+  }
+
+}

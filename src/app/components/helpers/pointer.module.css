@@ -1,0 +1,10 @@
+.pointer {
+    position: absolute;
+    bottom: 0;
+    color: black;
+}
+
+.pointerImg {
+    display: block;
+    margin: 0 auto;
+}
