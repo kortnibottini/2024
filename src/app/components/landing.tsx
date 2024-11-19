@@ -1,18 +1,17 @@
 "use client";
 import React from "react";
 import cx from "classnames";
-
-import styles from "./landing.module.css";
-import { images } from "./emoji/emojis";
+import Image from "next/image";
 import { useGSAP } from "@gsap/react";
-
 import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
 import { gsap } from "gsap";
 import { uniqueId } from "lodash";
+
+import { images } from "./emoji/emojis";
 import { Marquee } from "./marquee";
 import { Header } from "../header";
 import { Pointer } from "./helpers/pointer";
-import Image from "next/image";
+import styles from "./landing.module.css";
 
 import {
   throttle,
@@ -20,6 +19,7 @@ import {
   calculateDiagonalAngle,
   useMobile,
 } from "./helpers/utils";
+
 gsap.registerPlugin(ScrollToPlugin);
 
 type EmojiSpot = {
@@ -50,6 +50,7 @@ export const Landing = () => {
   const hathMouseMoven = React.useRef(false);
   const [shouldMoveOn, setShouldMoveOn] = React.useState(false);
   const [triggerScroll, setTriggerScroll] = React.useState(false);
+  const isMobile = useMobile();
 
   useGSAP(
     () => {
@@ -122,14 +123,14 @@ export const Landing = () => {
   React.useEffect(() => {
     setTextAngle(calculateDiagonalAngle());
     setTimeout(() => {
-      if (!hathMouseMoven.current && !shouldMoveOn) {
+      if (!hathMouseMoven.current && !shouldMoveOn && !isMobile) {
         setShouldMoveOn(true);
       }
     }, 10000);
 
     setTimeout(() => {
       setTriggerScroll(true);
-    }, 10000);
+    }, 5000);
   }, []);
 
   return (

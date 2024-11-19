@@ -9,8 +9,9 @@
   color: white;
   background-color: black;
   z-index: 99;
-  margin-top: 80px;
+  margin-top: 2vh;
 }
+
 .contactMarquee span {
   margin-right: 20px;
 }
@@ -47,7 +48,6 @@ span.marqueeEndEmoji {
   max-width: 500px;
   display: flex;
   width: 100%;
-  margin-top: 100px;
 }
 
 .contactInner form {
@@ -106,9 +106,9 @@ span.marqueeEndEmoji {
   .contactInner {
     width: 85vw;
     margin: 0 auto;
-    top: 30vh;
+    top: 50%;
     position: relative;
     left: 0;
-    transform: translate(0, 0);
+    transform: translate(0, -50%);
   }
 }

@@ -6,9 +6,14 @@ import { useLenis } from "lenis/react";
 import styles from "./marquee.module.css";
 import cx from "classnames";
 
-export const Marquee: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({
+interface MarqueeProps extends React.HTMLAttributes<HTMLDivElement> {
+  speed?: number;
+}
+
+export const Marquee: React.FC<MarqueeProps> = ({
   children,
   className,
+  speed = 5,
   ...rest
 }) => {
   const tl = React.useRef<gsap.core.Timeline>();
@@ -21,7 +26,7 @@ export const Marquee: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({
       {
         paused: false,
         repeat: -1,
-        speed: 5,
+        speed,
       },
       gsap
     );

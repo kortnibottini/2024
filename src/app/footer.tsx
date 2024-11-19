@@ -57,7 +57,7 @@ export const Footer = () => {
         </a>
       </div>
       <div className={styles.footerMiddle}>
-        <a href="phone:503.816.2299"># {isMobile ? "P" : "503.816.2299"}</a>
+        <a href="tel:+15038162299"># {isMobile ? "P" : "503.816.2299"}</a>
       </div>
       <div className={styles.footerRight}>
         <a href="https://www.linkedin.com/in/kortni-bottini/">

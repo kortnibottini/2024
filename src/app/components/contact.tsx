@@ -62,7 +62,7 @@ export const Contact = () => {
   };
   return (
     <section className={cx(styles.contact, "sticky-section")} id="contact">
-      <Marquee className={styles.contactMarquee}>
+      <Marquee speed={2} className={styles.contactMarquee}>
         <NMQ>&nbsp;&nbsp;&nbsp;GET</NMQ>
         <NMQ>IN</NMQ>
         <NMQ>TOUCH</NMQ>

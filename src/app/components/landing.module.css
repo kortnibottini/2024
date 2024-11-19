@@ -38,6 +38,7 @@
 .marquee img {
   height: 55vw;
   width: auto;
+  margin-left: 15vw;
 }
 
 .marqueeDesign {
