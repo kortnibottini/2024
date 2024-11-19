@@ -3,6 +3,7 @@ import cx from "classnames";
 import styles from "./intro.module.css";
 import { AnimateLine } from "./animate-line";
 import { Heading } from "../helpers/heading";
+import { Paragraph } from "../helpers/paragraph";
 import { Em } from "../helpers/em";
 import Image from "next/image";
 
@@ -28,9 +29,15 @@ export const MobileIntro = () => {
           </Heading>
         </div>
         <div className={cx(styles.story, "animate-in")}>
-          Based in PDX, I'm a creative leader with 15 years of experience making
-          design magic happen. I am always open to making connections and take
-          on a small amount of consulting each year.
+          <Paragraph>
+            With 15 years of experience making design magic happen, I lead with
+            a focus on crafting unforgettable experiences that blend strategy
+            and creativity.
+          </Paragraph>
+          <Paragraph>
+            Passionate about building exceptional design cultures, I thrive on
+            turning bold ideas into impactful realities.
+          </Paragraph>
         </div>
       </div>
     </div>

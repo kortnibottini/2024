@@ -8,4 +8,5 @@
 
 .marquee span {
   white-space: nowrap;
+  margin: 0 5vh;
 }

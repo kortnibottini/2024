@@ -77,8 +77,8 @@
   }
 
   .image > img {
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 30vh;
   }
 
   .circleContainer {
@@ -99,7 +99,7 @@
     transform: translateY(-50%);
     display: flex;
     margin: 0 auto;
-    gap: 38px;
+    gap: 10px;
     justify-content: center;
     background: black;
     flex-direction: column;

@@ -9,14 +9,13 @@ import { Em } from "./helpers/em";
 import { Heading } from "./helpers/heading";
 import { Paragraph } from "./helpers/paragraph";
 
-import project1 from "../../../public/projects/1.jpg";
+import project1 from "../../../public/projects/1.png";
 import project2 from "../../../public/projects/2.png";
 import project3 from "../../../public/projects/3.png";
 import project4 from "../../../public/projects/4.png";
 import project5 from "../../../public/projects/5.png";
-import project6 from "../../../public/projects/6.png";
 
-const projects = [project1, project2, project3, project4, project5, project6];
+const projects = [project1, project2, project3, project4, project5];
 
 import cx from "classnames";
 

@@ -125,7 +125,7 @@ export const Landing = () => {
       if (!hathMouseMoven.current && !shouldMoveOn) {
         setShouldMoveOn(true);
       }
-    }, 5000);
+    }, 10000);
 
     setTimeout(() => {
       setTriggerScroll(true);
@@ -140,7 +140,7 @@ export const Landing = () => {
     >
       <Header />
       <Marquee
-        className={styles.bottomRightMarquee}
+        className={styles.marquee}
         style={{ "--text-angle": textAngle } as React.CSSProperties}
       >
         <span>
