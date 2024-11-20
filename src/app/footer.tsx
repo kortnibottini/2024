@@ -53,12 +53,12 @@ export const Footer = () => {
     <footer className={styles.footer}>
       {showToast && <Toast cb={hideToast}>Email copied!</Toast>}
       <div>
-        <a href="hey@kortnibottini.com" onClick={copyLink}>
-          {isMobile ? "E" : "copy: hey@kortnibottini.com"}
+        <a href="kortni.bottini@gmail.com" onClick={copyLink}>
+          {isMobile ? "E" : "copy: kortni.bottini@gmail.com"}
         </a>
       </div>
       <div className={styles.footerMiddle}>
-        <a href="tel:+15038162299"># {isMobile ? "P" : "503.816.2299"}</a>
+        <a href="tel:+19712661930"># {isMobile ? "P" : "971.266.1930"}</a>
       </div>
       <div className={styles.footerRight}>
         <a href="https://www.linkedin.com/in/kortni-bottini/" target="_blank">
