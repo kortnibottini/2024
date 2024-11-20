@@ -15,7 +15,7 @@ import { useLenis } from "lenis/react";
 export const DesktopIntro = () => {
   const tl = React.useRef<gsap.core.Timeline>();
   useLenis(({ velocity }) => {
-    tl.current?.timeScale(velocity || 1);
+    tl.current?.timeScale(velocity * 0.025 || 1);
   });
   useGSAP(
     () => {

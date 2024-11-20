@@ -73,12 +73,12 @@ export const Projects = () => {
           <Em>AI enthusiast</Em>. Full-time <Em>creative</Em>.
         </Heading>
         <Paragraph className={cx(styles.story, "animate-in")}>
-          When I am not championing strategic teams, you can find me making mud
-          pies in my backyard urban farm or climbing a mountain. I am a pretty
-          baller cook, I love hip hop, and could talk for hours on the finer
-          points of b-roll horror films. I like to collaborate with amazing
-          talent, solve tricky problems, and make the world a better place one
-          interaction at a time. People first, always.
+          When I am not championing strategic teams, you can find me in my
+          backyard urban farm or climbing a mountain. I am a pretty baller cook,
+          I love hip hop, and could talk for hours on the finer points of b-roll
+          horror films. I like to collaborate with amazing talent, solve tricky
+          problems, and make the world a better place one interaction at a time.
+          Design is about the human experience—people first, always.
         </Paragraph>
         <div className={styles.projectItems}>
           {projects.map((src, i) => (
