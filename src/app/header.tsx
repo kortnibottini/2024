@@ -53,14 +53,14 @@ export const Header = () => {
             target="_blank"
             className={cx(styles.headerButton, styles.resume)}
           >
-            Resumé
+            resumé
           </a>
           <a
             href="#contact"
             className={cx(styles.headerButton, styles.contact)}
             onClick={handleContactClick}
           >
-            Contact
+            contact
           </a>
         </nav>
       </div>

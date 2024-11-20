@@ -94,7 +94,7 @@ span.marqueeEndEmoji {
   cursor: pointer;
   transition: all 0.5s;
   border-radius: 40px;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 200;
   padding: 15px 40px;
 }

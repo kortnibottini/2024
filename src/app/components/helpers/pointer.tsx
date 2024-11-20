@@ -33,7 +33,7 @@ export const Pointer = () => {
 
   return (
     <Paragraph className={styles.pointer} onClick={handleClick}>
-      This way{" "}
+      this way{" "}
       <Image
         src={"/pointer.svg"}
         width="8"
