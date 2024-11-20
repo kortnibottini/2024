@@ -4,6 +4,10 @@ import stylez from "./paragraph.module.css";
 
 export const Paragraph: React.FC<
   React.HTMLAttributes<HTMLParagraphElement>
-> = ({ children, className }) => {
-  return <p className={cx(stylez.paragraph, className)}>{children}</p>;
+> = ({ children, className, ...rest }) => {
+  return (
+    <p className={cx(stylez.paragraph, className)} {...rest}>
+      {children}
+    </p>
+  );
 };

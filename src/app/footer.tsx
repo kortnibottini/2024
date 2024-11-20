@@ -28,6 +28,7 @@ export const Footer = () => {
       opacity: 0,
       duration: 2,
       stagger: 0.5,
+      display: "none",
     });
   }, []);
   const isMobile = useMobile();

@@ -6,15 +6,33 @@ import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 
 export const Pointer = () => {
-  useGSAP(() => {
-    gsap.to(`.${styles.pointerImg}`, {
-      y: 5,
-      repeat: -1,
-      yoyo: true,
+  useGSAP(
+    () => {
+      gsap.to(`.${styles.pointerImg}`, {
+        y: 5,
+        repeat: -1,
+        yoyo: true,
+      });
+    },
+    {
+      dependencies: [],
+    }
+  );
+
+  const handleClick = () => {
+    const elm = document.getElementById("intro");
+    const offset = elm?.offsetTop! + elm?.offsetHeight! - window.innerHeight;
+
+    gsap.to(window, {
+      duration: 2,
+      scrollTo: {
+        y: offset,
+      },
     });
-  });
+  };
+
   return (
-    <Paragraph className={styles.pointer}>
+    <Paragraph className={styles.pointer} onClick={handleClick}>
       This way{" "}
       <Image
         src={"/pointer.svg"}

@@ -17,8 +17,26 @@ export const Marquee: React.FC<MarqueeProps> = ({
   ...rest
 }) => {
   const tl = React.useRef<gsap.core.Timeline>();
+  const hasPageLoaded = React.useRef(false);
+
+  React.useEffect(() => {
+    // callback function to call when event triggers
+    const onPageLoad = () => {
+      hasPageLoaded.current = true;
+    };
+
+    // Check if the page has already loaded
+    if (document.readyState === "complete") {
+      onPageLoad();
+    } else {
+      window.addEventListener("load", onPageLoad, false);
+      // Remove the event listener when component unmounts
+      return () => window.removeEventListener("load", onPageLoad);
+    }
+  }, []);
+
   useLenis(({ velocity }) => {
-    tl.current?.timeScale(velocity || 1);
+    tl.current?.timeScale(hasPageLoaded.current ? velocity || 1 : 1);
   });
   useGSAP(() => {
     tl.current = horizontalLoop(

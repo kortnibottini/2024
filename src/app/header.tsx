@@ -12,6 +12,14 @@ const TextInfo: React.FC<React.PropsWithChildren<{}>> = ({ children }) => (
 );
 
 export const Header = () => {
+  const handleContactClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+
+    gsap.to(window, {
+      duration: 1,
+      scrollTo: "#contact",
+    });
+  };
   return (
     <header className={styles.header}>
       <div className={styles.headerInner}>
@@ -50,6 +58,7 @@ export const Header = () => {
           <a
             href="#contact"
             className={cx(styles.headerButton, styles.contact)}
+            onClick={handleContactClick}
           >
             Contact
           </a>

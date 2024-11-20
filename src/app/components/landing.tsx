@@ -143,6 +143,7 @@ export const Landing = () => {
       <Marquee
         className={styles.marquee}
         style={{ "--text-angle": textAngle } as React.CSSProperties}
+        speed={2}
       >
         <span>
           <Image

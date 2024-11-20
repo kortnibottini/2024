@@ -74,6 +74,13 @@ span.marqueeEndEmoji {
   padding: 27px;
   margin-bottom: 30px;
   font-family: var(--font-oaks);
+  font-size: 16px;
+  transition: border-color 0.5s;
+}
+
+.contactInner input:hover,
+.contactInner textarea:hover {
+  border-color: #ffffff8e;
 }
 
 .contactInner textarea {
