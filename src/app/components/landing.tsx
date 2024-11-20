@@ -150,8 +150,8 @@ export const Landing = () => {
             unoptimized
             src="/kbdd.svg"
             alt="Kortni bottini does design"
-            height={137}
-            width={137}
+            height={10000}
+            width={10000}
             priority
           />
         </span>
@@ -160,8 +160,8 @@ export const Landing = () => {
             unoptimized
             src="/kbdd.svg"
             alt="Kortni bottini does design"
-            height={137}
-            width={137}
+            height={10000}
+            width={10000}
             priority
           />
         </span>

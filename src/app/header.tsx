@@ -43,7 +43,7 @@ export const Header = () => {
             <b>located:</b> portland, or
           </TextInfo>
           <TextInfo>
-            libra/scorpio <b>cusp</b>
+            <b>cusp</b> libra/scorpio
             <span className={styles.emoji}>&nbsp;&nbsp;🔮</span>
           </TextInfo>
         </div>

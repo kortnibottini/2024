@@ -6,7 +6,7 @@ export const images = new Array(25)
   .fill(0)
   .map((_, k) => () => (
     <Image
-      src={`/emojis/${k + 1}.${k > 19 ? "svg" : "png"}`}
+      src={`/emojis/${k + 1}.${k >= 17 ? "svg" : "png"}`}
       alt="illustration of an alien"
       unoptimized
       className={styles.emoji}
