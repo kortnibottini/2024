@@ -1,17 +1,11 @@
 import * as React from "react";
 import styles from "./contact.module.css";
 import Image from "next/image";
-import { useGSAP } from "@gsap/react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/all";
-import { CustomEase } from "gsap/all";
 import Marquee1 from "../../../public/marquee-1.svg";
 import Marquee2 from "../../../public/marquee-2.svg";
+import { Toast } from "./helpers/toast";
 import { Marquee } from "./marquee";
 import cx from "classnames";
-
-gsap.registerPlugin(ScrollTrigger);
-gsap.registerPlugin(CustomEase);
 
 const NMQ: React.FC<React.PropsWithChildren<{}>> = ({ children }) => (
   <span className={styles.nm}>{children}</span>
@@ -23,19 +17,6 @@ const Tan: React.FC<React.PropsWithChildren<{ className?: string }>> = ({
 }) => <span className={cx(styles.tan, className)}>{children}</span>;
 
 export const Contact = () => {
-  useGSAP(() => {
-    CustomEase.create("custom", "0.64, 0.03, 0.07, 0.97");
-    let timeline = gsap.timeline({
-      scrollTrigger: {
-        trigger: `#contact`,
-        start: "top 70%",
-        end: "bottom bottom",
-        pin: false,
-        scrub: 1,
-        markers: false,
-      },
-    });
-  }, []);
   const [result, setResult] = React.useState("");
 
   const onSubmit = async (event: any) => {
@@ -88,6 +69,7 @@ export const Contact = () => {
           <Image src={Marquee2} alt="Smiley face" />
         </Tan>
       </Marquee>
+      {result.length > 1 && <Toast cb={() => setResult("")}>{result}</Toast>}
       <div className={styles.contactInner}>
         <form onSubmit={onSubmit}>
           <input type="hidden" name="subject" value="Inquiry from your site" />

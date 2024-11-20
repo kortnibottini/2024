@@ -61,7 +61,7 @@ export const Footer = () => {
         <a href="tel:+15038162299"># {isMobile ? "P" : "503.816.2299"}</a>
       </div>
       <div className={styles.footerRight}>
-        <a href="https://www.linkedin.com/in/kortni-bottini/">
+        <a href="https://www.linkedin.com/in/kortni-bottini/" target="_blank">
           <Image src={LilArrow} alt="tiny arrow pointing to Linkedin" />{" "}
           {isMobile ? "L" : "Linkedin"}
         </a>

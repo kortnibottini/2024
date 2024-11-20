@@ -30,7 +30,7 @@ export const Marquee: React.FC<MarqueeProps> = ({
       onPageLoad();
     } else {
       window.addEventListener("load", onPageLoad, false);
-      // Remove the event listener when component unmounts
+
       return () => window.removeEventListener("load", onPageLoad);
     }
   }, []);

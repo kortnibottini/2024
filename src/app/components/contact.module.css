@@ -88,12 +88,15 @@ span.marqueeEndEmoji {
 }
 
 .contactInner button {
-  border-radius: 20px;
   background-color: #2e2b26;
-  padding: 12px 56px;
   outline: none;
   border: none;
   cursor: pointer;
+  transition: all 0.5s;
+  border-radius: 40px;
+  font-size: 12px;
+  font-weight: 200;
+  padding: 15px 40px;
 }
 
 .contactInner button:hover {

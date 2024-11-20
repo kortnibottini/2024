@@ -51,6 +51,10 @@
 
 
 @media screen and (max-width: 1024px) {
+    .header {
+        padding: 20px 15px 20px 20px;
+    }
+
     .textInfo {
         display: none;
     }
