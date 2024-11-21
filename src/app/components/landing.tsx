@@ -50,6 +50,7 @@ export const Landing = () => {
   const hathMouseMoven = React.useRef(false);
   const [shouldMoveOn, setShouldMoveOn] = React.useState(false);
   const [triggerScroll, setTriggerScroll] = React.useState(false);
+
   const isMobile = useMobile();
 
   useGSAP(
@@ -79,6 +80,7 @@ export const Landing = () => {
         }
       }
 
+      // Scroll user if they haven't interacted.
       if (shouldMoveOn && window.scrollY <= 10) {
         const elm = document.getElementById("intro");
         const offset =
@@ -93,6 +95,8 @@ export const Landing = () => {
             setShouldMoveOn(false);
           },
         });
+      } else if (shouldMoveOn && window.scrollY >= 10) {
+        setShouldMoveOn(false);
       }
     },
     {
@@ -166,6 +170,7 @@ export const Landing = () => {
           />
         </span>
       </Marquee>
+      {isMobile && <div className={styles.cta}>Tap screen for fun</div>}
       {triggerScroll && <Pointer />}
       {activeMojis.map((emoji, k) => {
         const Emoji = emoji ? emoji.src : null;

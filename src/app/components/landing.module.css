@@ -29,9 +29,9 @@
 
 .marquee {
   --text-angle: -26deg;
-  bottom: -65vh;
+  bottom: -50vh;
   left: 0;
-  transform-origin: bottom left;
+  transform-origin: center left;
   transform: rotate(calc(var(--text-angle) * -1deg));
 }
 

@@ -8,12 +8,14 @@ import cx from "classnames";
 
 interface MarqueeProps extends React.HTMLAttributes<HTMLDivElement> {
   speed?: number;
+  paused?: boolean;
 }
 
 export const Marquee: React.FC<MarqueeProps> = ({
   children,
   className,
   speed = 5,
+  paused = false,
   ...rest
 }) => {
   const tl = React.useRef<gsap.core.Timeline>();
